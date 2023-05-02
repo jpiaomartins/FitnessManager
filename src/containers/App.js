@@ -1,9 +1,11 @@
+import React from 'react';
 import './App.css';
+import SideMenu from '../components/SideMenu/SideMenu';
 
 function App() {
   return (
     <div className="App">
-        <h1>Testing React</h1>
+        <SideMenu />
     </div>
   );
 }

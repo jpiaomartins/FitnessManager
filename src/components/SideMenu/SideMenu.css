@@ -1,0 +1,6 @@
+.side-menu {
+    background: var(--side_menu_background_color);
+    width: 250px;
+    height: 100%;
+    position: fixed;
+}
