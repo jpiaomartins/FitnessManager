@@ -10,8 +10,8 @@ const ButtonMenu = ({classText, text}) => {
 
     return (
         <div className={isActive?'button-menu active':'button-menu'} onClick={onButtonClick}>
-            <i className={classText + ' centered'}></i>
-            <p className="centered">{text}</p>
+            <i className={classText + ' vertical-centered'}></i>
+            <p className="vertical-centered">{text}</p>
         </div>
     )
 };

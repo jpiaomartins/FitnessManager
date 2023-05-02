@@ -9,11 +9,6 @@
     transition: background-color 0.2s ease-in;
 }
 
-.centered {
-    display: flex;
-    align-items: center;
-}
-
 .active {
     background-color: var(--background_color);
 }
