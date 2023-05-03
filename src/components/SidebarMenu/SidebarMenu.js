@@ -1,8 +1,8 @@
 import React from "react";
-import './SideMenu.css';
+import './SidebarMenu.css';
 import ButtonMenu from "../ButtonMenu/ButtonMenu";
 
-const SideMenu = () => {
+const SidebarMenu = () => {
     return (
         <div className='side-menu'>
             <div className="top-info">
@@ -18,4 +18,4 @@ const SideMenu = () => {
     )
 };
 
-export default SideMenu;
+export default SidebarMenu;
