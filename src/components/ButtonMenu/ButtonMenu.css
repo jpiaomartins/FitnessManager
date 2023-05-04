@@ -1,4 +1,4 @@
-.button-menu {
+.menu-btn {
     display: flex;
     flex: wrap;
     justify-content: flex-start;
@@ -7,11 +7,22 @@
     width: 90%;
     height: 60px;
     transition: background-color 0.2s ease-in;
+    font-size: 0.95rem;
 }
 
-.button-menu:hover {
+.menu-btn:hover {
     background-color: var(--primary_color_hover);
     color: white;
+}
+
+.menu-icon {
+    /* font-size: 36px;
+    font-variation-settings: 'wght' 100, 'opsz' 36, 'FILL' 1; */
+    padding: 0 20px 0 10px;
+}
+
+.menu-icon:hover {
+    font-variation-settings: 'FILL' 1;
 }
 
 .active {
@@ -19,7 +30,4 @@
     color: white;
 }
 
-.button-menu .bx {
-    padding: 0 20px 0 20px;
-}
 

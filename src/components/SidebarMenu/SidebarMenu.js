@@ -8,34 +8,22 @@ const SidebarMenu = () => {
         {
             id: '0',
             text: 'Home',
-            classText: {
-                nonActive:'bx bx-home-alt-2 bx-md',
-                active: 'bx bxs-home-alt-2 bx-md',
-            }
+            icon: 'home'
         },
         {
             id: '1',
             text: 'Profile',
-            classText: {
-                nonActive:'bx bx-smile bx-md',
-                active: 'bx bxs-smile bx-md',
-            }
+            icon: 'person'
         },
         {
             id: '2',
             text: 'Exercises',
-            classText: {
-                nonActive:'bx bx-run bx-md',
-                active: 'bx bx-run bx-md',
-            }
+            icon: 'directions_run'
         },
         {
             id: '3',
-            text: 'Food Plan',
-            classText: {
-                nonActive:'bx bx-bowl-hot bx-md',
-                active: 'bx bxs-bowl-hot bx-md',
-            }
+            text: 'Nutrition',
+            icon: 'nutrition'
         },
     ];
 
@@ -55,12 +43,18 @@ const SidebarMenu = () => {
                     menuItems.map(item => {
                         if(activeItemId === item.id) {
                             console.log("True");
-                            return <ButtonMenu key={item.id} id={item.id} classText={item.classText} text={item.text} changeActiveItem={changeActiveItem} itemActive={true}/>;
+                            return <ButtonMenu key={item.id} id={item.id} icon={item.icon} text={item.text} changeActiveItem={changeActiveItem} itemActive={true}/>;
                         } else {
-                            return <ButtonMenu key={item.id} id={item.id} classText={item.classText} text={item.text} changeActiveItem={changeActiveItem} itemActive={false}/>;
+                            return <ButtonMenu key={item.id} id={item.id} icon={item.icon} text={item.text} changeActiveItem={changeActiveItem} itemActive={false}/>;
                         }
                     })
                 }
+            </div>
+            <div className='sidebar-footer'>
+                <div className='logout vertical-centered'>
+                    <span style={{fontSize: "36px",  fontVariationSettings: "'wght' 150, 'opsz' 36, 'FILL' 1"}} className="material-symbols-rounded menu-icon vertical-centered">logout</span>
+                    <span>Logout</span>
+                </div>
             </div>
         </div>
     )

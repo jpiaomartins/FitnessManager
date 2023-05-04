@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import './ButtonMenu.css';
 
-const ButtonMenu = ({id, classText, text, changeActiveItem, itemActive}) => {
+const ButtonMenu = ({id, icon, text, changeActiveItem, itemActive}) => {
     const [isActive, setActive] = useState(false);
     const [isActiveOver, setActiveOver] = useState(false);
 
@@ -25,14 +25,13 @@ const ButtonMenu = ({id, classText, text, changeActiveItem, itemActive}) => {
     return (
         <div
             id={id} 
-            className={isActive?'button-menu active':'button-menu'} 
+            className={isActive?'menu-btn active':'menu-btn'} 
             onClick={onButtonClick}
             onMouseOver={onMouseOver}
             onMouseOut={onMouseOut}
         >
-            <i className={(isActive || isActiveOver?classText.active:classText.nonActive) + ' vertical-centered'}>
-            </i>
-            <span className="vertical-centered">{text}</span>
+            <span style={{fontSize: "36px",  fontVariationSettings: "'wght' 150, 'opsz' 36, " + (isActive || isActiveOver?"'FILL' 1":"'FILL' 0")}} className="material-symbols-rounded menu-icon vertical-centered">{icon}</span>
+            <span className="bt-txt vertical-centered">{text}</span>
         </div>
     )
 };

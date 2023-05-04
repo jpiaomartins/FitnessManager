@@ -1,5 +1,6 @@
 @import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 :root {
   --menu_color: white;
@@ -24,4 +25,8 @@ code {
 .vertical-centered {
   display: flex;
   align-items: center;
+}
+
+.scrollable {
+  overflow-y: scroll;
 }
