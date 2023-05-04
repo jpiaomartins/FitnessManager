@@ -2,15 +2,21 @@
     display: flex;
     flex: wrap;
     justify-content: flex-start;
-    margin: 10px 0px 10px 10px;
-    border-radius: 50px 0px 0px 50px;
-    width: 100%;
+    margin: 12.5px 0px 10px 12.5px;
+    border-radius: 16px 16px 16px 16px; 
+    width: 90%;
     height: 60px;
     transition: background-color 0.2s ease-in;
 }
 
+.button-menu:hover {
+    background-color: var(--primary_color_hover);
+    color: white;
+}
+
 .active {
-    background-color: var(--background_color);
+    background-color: var(--primary_color);
+    color: white;
 }
 
 .button-menu .bx {

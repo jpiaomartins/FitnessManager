@@ -1,10 +1,26 @@
-.side-menu {
-    background: var(--side_menu_background_color);
-    width: 250px;
+.sidebar-menu {
+    background: var(--menu_color);
+    width: 260px;
     height: 100%;
     position: fixed;
 }
 
-.top-info{
-    padding: 20px 0 20px 0;
+.sidebar-header {
+    margin: 20px 13px 50px 13px;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.logo-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: var(--primary_color);
+    width: 55px;
+    height: 55px;
+    color: white;
+    border-radius: 16px;
 }
