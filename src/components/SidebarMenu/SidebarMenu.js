@@ -25,6 +25,11 @@ const SidebarMenu = () => {
             text: 'Nutrition',
             icon: 'nutrition'
         },
+        {
+            id: '4',
+            text: 'Recipes',
+            icon: 'cooking'
+        },
     ];
 
     const changeActiveItem = (id) => {
@@ -37,6 +42,9 @@ const SidebarMenu = () => {
             <div className="sidebar-header">
                 <div className="logo-header">FM</div>
                 <span className="vertical-centered">Fitness Manager</span>
+                <div className="bt-sm vertical-centered">
+                    <span className="material-symbols-rounded">keyboard_double_arrow_left</span>
+                </div>
             </div>
             <div className="sidebar-items">
                 { 
