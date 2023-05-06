@@ -7,6 +7,9 @@
   --primary_color: orange;
   --primary_color_hover: rgba(255, 166, 0, 0.8);
   --background_color: rgb(239, 234, 234);
+  --sidebar_expanded_width: 280px;
+  --sidebar_collapsed_width: 50px;
+  --sidebar_animation_speed: 0.5s;
 }
 
 body {

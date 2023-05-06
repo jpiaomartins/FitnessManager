@@ -1,51 +1,56 @@
 import React, {useState} from "react";
 import './SidebarMenu.css';
 import ButtonMenu from "../ButtonMenu/ButtonMenu";
+import ButtonExpand from "../ButtonExpand/ButtonExpand";
+
+const menuItems = [
+    {
+        id: '0',
+        text: 'Home',
+        icon: 'home'
+    },
+    {
+        id: '1',
+        text: 'Profile',
+        icon: 'person'
+    },
+    {
+        id: '2',
+        text: 'Exercises',
+        icon: 'directions_run'
+    },
+    {
+        id: '3',
+        text: 'Nutrition',
+        icon: 'nutrition'
+    },
+    {
+        id: '4',
+        text: 'Recipes',
+        icon: 'cooking'
+    },
+];
 
 const SidebarMenu = () => {
     const [activeItemId, setActiveItem] = useState('');
-    const menuItems = [
-        {
-            id: '0',
-            text: 'Home',
-            icon: 'home'
-        },
-        {
-            id: '1',
-            text: 'Profile',
-            icon: 'person'
-        },
-        {
-            id: '2',
-            text: 'Exercises',
-            icon: 'directions_run'
-        },
-        {
-            id: '3',
-            text: 'Nutrition',
-            icon: 'nutrition'
-        },
-        {
-            id: '4',
-            text: 'Recipes',
-            icon: 'cooking'
-        },
-    ];
+    const [isCollapsed, setCollapsed] = useState(false);
 
     const changeActiveItem = (id) => {
         setActiveItem(id);
         console.log(id);
     };
 
+    const changeCollapsed = () => {
+        setCollapsed(!isCollapsed);
+    }
+
     return (
         <div className='sidebar-menu'>
             <div className="sidebar-header">
                 <div className="logo-header">FM</div>
                 <span className="vertical-centered">Fitness Manager</span>
-                <div className="bt-sm vertical-centered">
-                    <span className="material-symbols-rounded">keyboard_double_arrow_left</span>
-                </div>
             </div>
+            <ButtonExpand isCollapsed={isCollapsed} changeCollapsed={changeCollapsed} />
             <div className="sidebar-items">
                 { 
                     menuItems.map(item => {

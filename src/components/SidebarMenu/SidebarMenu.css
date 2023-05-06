@@ -1,13 +1,13 @@
 .sidebar-menu {
     background: var(--menu_color);
-    width: 280px;
+    width: var(--sidebar_expanded_width);
     height: 100%;
     min-height: 600px;
     position: absolute;
 }
 
 .sidebar-header {
-    margin: 20px 13px 50px 13px;
+    margin: 20px 0px 50px 13px;
     display: flex;
     justify-content: flex-start;
     font-weight: 600;
@@ -32,4 +32,21 @@
     position: absolute;
     margin-left: 13px; 
     bottom: 5%;
+}
+
+.bt-sm {
+    position: absolute;
+    top: 35px;
+    right: -4%;
+    background-color: var(--menu_color);
+    border-radius: 20px;
+}
+
+.bt-sm:hover {
+    background-color: var(--primary_color);
+    color: white;
+}
+
+.sidebar-menu .compact {
+    width: var(--sidebar_collapsed_width);
 }
