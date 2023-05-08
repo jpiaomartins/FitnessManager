@@ -5,9 +5,13 @@
     margin: 12.5px 0px 10px 12.5px;
     border-radius: 16px 16px 16px 16px; 
     width: 90%;
-    height: 60px;
-    transition: background-color 0.2s ease-in;
+    height: var(--sidebar_icon_size);
+    transition: background-color 0.2s ease-in, width 0.3s linear;
     font-size: 0.95rem;
+}
+
+.menu-btn.compact {
+    width: var(--sidebar_icon_size);
 }
 
 .menu-btn:hover {
@@ -16,13 +20,23 @@
 }
 
 .menu-icon {
-    /* font-size: 36px;
-    font-variation-settings: 'wght' 100, 'opsz' 36, 'FILL' 1; */
+    width: var(--sidebar_icon_size);
     padding: 0 20px 0 10px;
 }
 
 .menu-icon:hover {
     font-variation-settings: 'FILL' 1;
+}
+
+.menu-btn .bt-txt {
+    transition: opacity 0.5s linear;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.menu-btn .bt-txt.hidden {
+    width: 0;
+    opacity: 0;
 }
 
 .active {

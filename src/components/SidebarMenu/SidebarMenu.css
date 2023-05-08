@@ -4,8 +4,7 @@
     height: 100%;
     min-height: 600px;
     position: absolute;
-    opacity: 1;
-    transition: width var(--sidebar_animation_speed) ease-in-out;
+    transition: var(--tran_animation_03s);
 }
 
 .sidebar-header {
@@ -14,6 +13,29 @@
     justify-content: flex-start;
     font-weight: 600;
     font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.hd-text {
+    opacity: 1;
+    transition: var(--tran_animation_05s);
+    overflow-x: hidden;
+}
+
+.hd-text.hidden {
+    width: 0;
+    opacity: 0;
+}
+
+.ft-text {
+    opacity: 1;
+    transition: var(--tran_animation_05s);
+    overflow-x: hidden;
+}
+
+.ft-text.hidden {
+    width: 0;
+    opacity: 0;
 }
 
 .logo-header {

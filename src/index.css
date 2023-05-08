@@ -9,7 +9,12 @@
   --background_color: rgb(239, 234, 234);
   --sidebar_expanded_width: 280px;
   --sidebar_collapsed_width: 80px;
-  --sidebar_animation_speed: 0.5s;
+  --sidebar_logo_size: 55px;
+  --sidebar_icon_size: 55px;
+  --tran_animation_02s: all 0.2s linear;
+  --tran_animation_03s: all 0.3s linear;
+  --tran_animation_04s: all 0.3s linear;
+  --tran_animation_05s: all 0.5s linear;
 }
 
 body {
@@ -32,9 +37,4 @@ code {
 
 .scrollable {
   overflow-y: scroll;
-}
-
-.hidden {
-  visibility: hidden;
-  opacity: 0;
 }

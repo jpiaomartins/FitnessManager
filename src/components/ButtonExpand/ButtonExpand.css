@@ -1,10 +1,10 @@
 .bt-sm {
     position: absolute;
     top: 35px;
-    right: -4%;
+    right: -15px;
     background-color: var(--menu_color);
     border-radius: 20px;
-    transition: transform var(--sidebar_animation_speed) ease-in-out;
+    transition: var(--tran_animation_03s);
 }
 
 .bt-sm:hover {

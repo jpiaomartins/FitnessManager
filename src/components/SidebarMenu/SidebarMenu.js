@@ -46,9 +46,14 @@ const SidebarMenu = () => {
 
     return (
         <div className={isCollapsed?'sidebar-menu compact':'sidebar-menu'}>
-            <div className="sidebar-header">
+            <div className="sidebar-header">    
                 <div className="logo-header">FM</div>
-                <span className={isCollapsed?"vertical-centered hidden":"vertical-centered"}>Fitness Manager</span>
+                {/* {
+                    isCollapsed?
+                    null:
+                    <span className="vertical-centered load">Fitness Manager</span>
+                } */}
+                <span className={isCollapsed?"hd-text vertical-centered hidden":"hd-text vertical-centered"}>Fitness Manager</span>
             </div>
             <ButtonExpand isCollapsed={isCollapsed} changeCollapsed={changeCollapsed} />
             <div className="sidebar-items">
@@ -66,7 +71,7 @@ const SidebarMenu = () => {
             <div className='sidebar-footer'>
                 <div className='logout vertical-centered'>
                     <span style={{fontSize: "36px",  fontVariationSettings: "'wght' 150, 'opsz' 36, 'FILL' 1"}} className="material-symbols-rounded menu-icon vertical-centered">logout</span>
-                    <span className={isCollapsed?'':'hidden'}>Logout</span>:
+                    <span className={isCollapsed?'ft-text hidden':'ft-text'}>Logout</span>
                 </div>
             </div>
         </div>
