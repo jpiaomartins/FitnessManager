@@ -8,7 +8,7 @@
   --primary_color_hover: rgba(255, 166, 0, 0.8);
   --background_color: rgb(239, 234, 234);
   --sidebar_expanded_width: 280px;
-  --sidebar_collapsed_width: 50px;
+  --sidebar_collapsed_width: 80px;
   --sidebar_animation_speed: 0.5s;
 }
 
@@ -32,4 +32,9 @@ code {
 
 .scrollable {
   overflow-y: scroll;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
