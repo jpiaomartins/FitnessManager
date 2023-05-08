@@ -37,7 +37,6 @@ const SidebarMenu = () => {
 
     const changeActiveItem = (id) => {
         setActiveItem(id);
-        console.log(id);
     };
 
     const changeCollapsed = () => {
@@ -45,22 +44,16 @@ const SidebarMenu = () => {
     }
 
     return (
-        <div className={isCollapsed?'sidebar-menu compact':'sidebar-menu'}>
-            <div className="sidebar-header">    
+        <nav className={isCollapsed?'sidebar-menu compact':'sidebar-menu'}>
+            <header className="sidebar-header">    
                 <div className="logo-header">FM</div>
-                {/* {
-                    isCollapsed?
-                    null:
-                    <span className="vertical-centered load">Fitness Manager</span>
-                } */}
                 <span className={isCollapsed?"hd-text vertical-centered hidden":"hd-text vertical-centered"}>Fitness Manager</span>
-            </div>
+            </header>
             <ButtonExpand isCollapsed={isCollapsed} changeCollapsed={changeCollapsed} />
             <div className="sidebar-items">
                 { 
                     menuItems.map(item => {
                         if(activeItemId === item.id) {
-                            console.log("True");
                             return <ButtonMenu key={item.id} id={item.id} icon={item.icon} text={item.text} changeActiveItem={changeActiveItem} itemActive={true} isCollapsed={isCollapsed}/>;
                         } else {
                             return <ButtonMenu key={item.id} id={item.id} icon={item.icon} text={item.text} changeActiveItem={changeActiveItem} itemActive={false} isCollapsed={isCollapsed}/>;
@@ -68,13 +61,13 @@ const SidebarMenu = () => {
                     })
                 }
             </div>
-            <div className='sidebar-footer'>
+            <footer className='sidebar-footer'>
                 <div className='logout vertical-centered'>
                     <span style={{fontSize: "36px",  fontVariationSettings: "'wght' 150, 'opsz' 36, 'FILL' 1"}} className="material-symbols-rounded menu-icon vertical-centered">logout</span>
                     <span className={isCollapsed?'ft-text hidden':'ft-text'}>Logout</span>
                 </div>
-            </div>
-        </div>
+            </footer>
+        </nav>
     )
 };
 
