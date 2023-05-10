@@ -4,11 +4,12 @@
     height: 100%;
     min-height: 600px;
     position: absolute;
-    transition: var(--tran_animation_03s);
+    transition: var(--tran_width);
+    z-index: 1000;
 }
 
 .sidebar-header {
-    margin: 20px 0px 50px 13px;
+    margin: 10px 0px 50px 13px;
     display: flex;
     justify-content: flex-start;
     font-weight: 600;
@@ -16,27 +17,17 @@
     white-space: nowrap;
 }
 
-.hd-text {
+.hd-text, .ft-text {
     opacity: 1;
-    transition: var(--tran_animation_05s);
+    transition: var(--tran_opacity);
     overflow-x: hidden;
 }
 
-.hd-text.hidden {
+.hd-text.hidden, .ft-text.hidden {
     width: 0;
     opacity: 0;
 }
 
-.ft-text {
-    opacity: 1;
-    transition: var(--tran_animation_05s);
-    overflow-x: hidden;
-}
-
-.ft-text.hidden {
-    width: 0;
-    opacity: 0;
-}
 
 .logo-header {
     display: flex;
@@ -57,6 +48,10 @@
     position: absolute;
     margin-left: 13px; 
     bottom: 5%;
+}
+
+.sidebar-menu .logout:hover {
+    color: red;
 }
 
 .sidebar-menu.compact {

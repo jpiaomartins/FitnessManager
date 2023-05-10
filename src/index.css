@@ -11,6 +11,11 @@
   --sidebar_collapsed_width: 80px;
   --sidebar_logo_size: 55px;
   --sidebar_icon_size: 55px;
+  --tran_back_color: background-color 0.2s ease-in;
+  --tran_text_color: color 0.2s ease-in;
+  --tran_width: width 0.3s linear;
+  --tran_opacity: opacity 0.5s linear;
+  --tran_transform: transform 0.3s linear;
   --tran_animation_02s: all 0.2s linear;
   --tran_animation_03s: all 0.3s linear;
   --tran_animation_04s: all 0.3s linear;
@@ -19,7 +24,7 @@
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--background_color);

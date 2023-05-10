@@ -6,7 +6,7 @@
     border-radius: 16px 16px 16px 16px; 
     width: 90%;
     height: var(--sidebar_icon_size);
-    transition: background-color 0.2s ease-in, width 0.3s linear;
+    transition: var(--tran_back_color), var(--tran_width);
     font-size: 0.95rem;
 }
 
