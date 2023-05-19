@@ -1,8 +1,5 @@
 .bt-sm {
-    position: absolute;
-    top: 25px;
-    right: -15px;
-    background-color: var(--menu_color);
+    justify-self: flex-end;
     border-radius: 20px;
     transition: var(--tran_transform), var(--tran_back_color);
 }
@@ -13,5 +10,5 @@
 }
 
 .rotate {
-    transform: rotate(180deg);
+    transform: rotate(540deg);
 }

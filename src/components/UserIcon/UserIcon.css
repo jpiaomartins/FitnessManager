@@ -1,0 +1,14 @@
+.user-icon  {
+    border-radius: 50px;
+    width: var(--user_icon_size);
+    min-width: var(--user_icon_size);
+    margin: 0 20px 0 0;
+}
+
+.user-icon:hover {
+    box-shadow: 0px 0px 3px black;
+}
+
+.user-icon.active {
+    box-shadow: 0px 0px 5px black;
+}

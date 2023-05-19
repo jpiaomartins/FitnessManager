@@ -31,7 +31,7 @@ const ButtonMenu = ({id, icon, text, changeActiveItem, itemActive, isCollapsed})
             onMouseOut={onMouseOut}
         >
             <span 
-                style={{fontSize: "36px",  fontVariationSettings: "'wght' 150, 'opsz' 36, " + (isActive || isActiveOver?"'FILL' 1":"'FILL' 0")}} 
+                style={{fontSize: "36px",  fontVariationSettings: "'wght' 250, 'opsz' 36, " + (isActive || isActiveOver?"'FILL' 1":"'FILL' 0")}} 
                 className="material-symbols-rounded menu-icon vertical-centered">{icon}
             </span>
             <span className={isCollapsed?"bt-txt vertical-centered hidden":"bt-txt vertical-centered"}>{text}</span>

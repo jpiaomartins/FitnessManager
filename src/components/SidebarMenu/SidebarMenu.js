@@ -31,39 +31,40 @@ const menuItems = [
     },
 ];
 
-const SidebarMenu = () => {
+const SidebarMenu = ({isMenuCollapsed}) => {
     const [activeItemId, setActiveItem] = useState('');
-    const [isCollapsed, setCollapsed] = useState(false);
+    const [isCollapsed, setCollapsed] = useState(isMenuCollapsed);
+
+    useEffect(() => {
+        setCollapsed(isMenuCollapsed);
+    }, [isMenuCollapsed]);
+
 
     const changeActiveItem = (id) => {
         setActiveItem(id);
     };
-
-    const changeCollapsed = () => {
-        setCollapsed(!isCollapsed);
-    }
 
     return (
         <nav className={isCollapsed?'sidebar-menu compact':'sidebar-menu'}>
             <header className="sidebar-header">    
                 <div className="logo-header">FM</div>
                 <span className={isCollapsed?"hd-text vertical-centered hidden":"hd-text vertical-centered"}>Fitness Manager</span>
+                {/* <ButtonExpand isCollapsed={isCollapsed} changeCollapsed={changeCollapsed} /> */}
             </header>
-            <ButtonExpand isCollapsed={isCollapsed} changeCollapsed={changeCollapsed} />
             <div className="sidebar-items">
                 { 
                     menuItems.map(item => {
                         if(activeItemId === item.id) {
-                            return <ButtonMenu key={item.id} id={item.id} icon={item.icon} text={item.text} changeActiveItem={changeActiveItem} itemActive={true} isCollapsed={isCollapsed}/>;
+                            return <ButtonMenu key={item.id} id={item.id} icon={item.icon} text={item.text} changeActiveItem={changeActiveItem} itemActive={true} isCollapsed={isMenuCollapsed}/>;
                         } else {
-                            return <ButtonMenu key={item.id} id={item.id} icon={item.icon} text={item.text} changeActiveItem={changeActiveItem} itemActive={false} isCollapsed={isCollapsed}/>;
+                            return <ButtonMenu key={item.id} id={item.id} icon={item.icon} text={item.text} changeActiveItem={changeActiveItem} itemActive={false} isCollapsed={isMenuCollapsed}/>;
                         }
                     })
                 }
             </div>
             <footer className='sidebar-footer'>
                 <div className='logout vertical-centered'>
-                    <span style={{fontSize: "36px",  fontVariationSettings: "'wght' 150, 'opsz' 36, 'FILL' 1"}} className="material-symbols-rounded menu-icon vertical-centered">logout</span>
+                    <span style={{fontSize: "36px",  fontVariationSettings: "'wght' 250, 'opsz' 36, 'FILL' 1"}} className="material-symbols-rounded menu-icon vertical-centered">logout</span>
                     <span className={isCollapsed?'ft-text hidden':'ft-text'}>Logout</span>
                 </div>
             </footer>

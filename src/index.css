@@ -3,14 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 :root {
-  --menu_color: white;
   --primary_color: orange;
   --primary_color_hover: rgba(255, 166, 0, 0.8);
-  --background_color: rgb(239, 234, 234);
   --sidebar_expanded_width: 280px;
-  --sidebar_collapsed_width: 80px;
+  --sidebar_collapsed_width: 90px;
   --sidebar_logo_size: 55px;
   --sidebar_icon_size: 55px;
+  --user_icon_size: 50px;
+  --header_min_height: 70px;
   --tran_back_color: background-color 0.2s ease-in;
   --tran_text_color: color 0.2s ease-in;
   --tran_width: width 0.3s linear;
@@ -22,12 +22,27 @@
   --tran_animation_05s: all 0.5s linear;
 }
 
+.light {
+  --menu_color: white;
+  --background_color: rgb(239, 234, 234);
+  --text_color: rgba(0, 0, 0, 0.87);
+}
+
+.dark {
+  --menu_color: #121212;
+  --background_color: #121212d8;
+  --text_color: #fff;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--background_color);
+  transition: var(--tran_back_color);
+  color: var(--text_color);
+  overflow-y: hidden;
 }
 
 code {

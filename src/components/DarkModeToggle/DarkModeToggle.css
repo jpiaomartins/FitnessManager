@@ -1,0 +1,35 @@
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@-moz-keyframes inverted-spin {
+    from { -moz-transform: rotate(360deg); }
+    to { -moz-transform: rotate(0deg); }
+}
+@-webkit-keyframes inverted-spin {
+    from { -webkit-transform: rotate(360deg); }
+    to { -webkit-transform: rotate(0deg); }
+}
+@keyframes inverted-spin {
+    from {transform:rotate(360deg);}
+    to {transform:rotate(0deg);}
+}
+
+.darkmode-toggle.spin {
+    animation-name: spin;
+    animation-duration: 0.5s;
+}
+
+.darkmode-toggle.inverted-spin {
+    animation-name: inverted-spin;
+    animation-duration: 0.5s;
+}
