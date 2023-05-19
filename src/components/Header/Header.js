@@ -3,11 +3,13 @@ import './Header.css';
 import ButtonExpand from "../ButtonExpand/ButtonExpand";
 import UserIcon from "../UserIcon/UserIcon";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
+import SearchBar from "../SearchBar/SearchBar";
 
 const Header = ({isMenuCollapsed, changeCollapsed}) => {
     return (
         <div className="header-nav">
             <ButtonExpand isCollapsed={isMenuCollapsed} changeCollapsed={changeCollapsed} />
+            <SearchBar />
             <div className="header-menu">
                 <DarkModeToggle />
                 <span 

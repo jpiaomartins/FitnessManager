@@ -1,0 +1,32 @@
+.search-bar {
+    display: flex;
+    height: 55%;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 32px;
+    background-color: var(--background_color);
+    /* border: var(--text_color) solid 2px; */
+}
+
+.search-bar .search-placeholder {
+    width: 80%;
+    text-align: center;
+    align-self: stretch;
+    margin: 5px;
+    background: transparent;
+    border: none;
+}
+
+.search-bar .search-placeholder:focus {
+    outline: none;
+}
+
+.search-bar .search-placeholder::-webkit-search-cancel-button {
+    color: var(--text_color);
+}
+
+.search-bar .search-icon {
+    width: 20%;
+    margin: 5px;
+}
